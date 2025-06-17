@@ -119,10 +119,10 @@ export const applications = [
 
 export const footerLinks = [
   {
-    logo: "assets/logo/logo.png",
+    logo: "assets/logo/footer-logo.png",
     title1: "Image to Text",
     description:
-      "We present an online OCR (Optical Character Recognition) service to extract text from images.",
+      "We provide different kinds of tools for your help.",
     links: [],
   },
   {
@@ -159,8 +159,8 @@ export const footerLinks = [
       title: "EMAIL",
       links: [
         {
-          name: "support@imagetotext.info",
-          url: "mailto:support@imagetotext.info",
+          name: "support@convertly-pro",
+          url: "mailto:support@convertly-pro",
         },
       ],
     },

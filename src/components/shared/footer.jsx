@@ -11,13 +11,13 @@ const Footer = () => {
           {footerLinks.map((section, index) => (
             <div key={index} className="space-y-4">
               {section.logo && (
-                <div className="flex items-center space-x-4 mb-4">
+                <div className="max-w-[200px] flex items-center space-x-4 mb-4">
                   <img
                     src={section.logo}
                     alt="Logo"
-                    className="w-10 h-auto object-cover"
+                    className="w-full h-auto object-cover"
                   />
-                  <h3 className="font-semibold text-xl">{section.title1}</h3>
+                  {/* <h3 className="font-semibold text-xl">{section.title1}</h3> */}
                 </div>
               )}
               {section.title && (
@@ -78,7 +78,7 @@ const Footer = () => {
       <div className="text-center text-base border-t border-gray-800 text-gray-300
        mt-8 pt-4 flex flex-col items-center justify-center">
         <p>© All rights reserved | It is made by</p>
-        <Link to={"/"} className="font-semibold text-lg">imagetotext.info</Link>
+        <Link to={"/"} className="font-semibold text-lg">Convertly Pro</Link>
       </div>
     </footer>
   );

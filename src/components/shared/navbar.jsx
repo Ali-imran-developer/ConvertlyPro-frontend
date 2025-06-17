@@ -1,20 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../../public/assets/logo/logo.png";
+import logo from "/assets/logo/logo2.png";
 import { iconsBtn, buttonLinks, navLinks } from "../../data/data";
 import ChatIcon from "../../../public/assets/icons/message.png";
 import Pricing from "../../../public/assets/icons/crown.png";
-import Login from "../../../public/assets/icons/login.png";
+import Login from "/assets/icons/login.png";
 import { UserRoundCheck } from "lucide-react";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const token = localStorage.getItem("authToken");
-  console.log("hell1");
 
   useEffect(() => {
-    console.log("hell2");
     setIsAuthenticated(!!token);
   }, [token]);
 
@@ -26,9 +24,9 @@ const Navbar = () => {
     <section className="py-2 bg-white">
       <div className="container mx-auto px-4 flex items-center justify-between">
         <div className="flex items-center gap-10">
-          <Link className="flex items-center gap-2" to={"/"}>
-            <img src={logo} alt="Logo" className="w-7 h-auto object-cover" />
-            <h4 className="font-medium text-lg">Image To Text</h4>
+          <Link className="flex items-center gap-2 max-w-[140px]" to={"/"}>
+            <img src={logo} alt="Logo" className="w-full h-auto object-cover" />
+            {/* <h4 className="font-medium text-lg">Image To Text</h4> */}
           </Link>
           <nav className="hidden lg:flex justify-end items-center gap-2">
             <ul className="flex gap-3">
@@ -43,7 +41,7 @@ const Navbar = () => {
           </nav>
         </div>
         <div className="hidden lg:flex gap-3">
-          <Link to={"/"}>
+          {/* <Link to={"/"}>
             <button className="flex items-center gap-2 border-r pr-3">
               <img src={ChatIcon} className="w-6 h-auto object-cover" />
               <span className="text-base font-medium">Chat</span>
@@ -54,11 +52,11 @@ const Navbar = () => {
               <img src={Pricing} className="w-6 h-auto object-cover" />
               <span className="text-base font-medium">Pricing</span>
             </button>
-          </Link>
+          </Link> */}
           {isAuthenticated ? (
             <Link to={'/profile'}>
               <button
-                className="flex items-center gap-2 border-r pr-3"
+                className="flex items-center gap-2 pr-3"
               >
                 <UserRoundCheck className="text-blue-600 w-6 h-auto object-cover" />
                 <span className="text-base font-medium">profile</span>
@@ -66,7 +64,7 @@ const Navbar = () => {
             </Link>
           ) : (
             <Link to={"/login"}>
-              <button className="flex items-center gap-2 border-r pr-3">
+              <button className="flex items-center gap-2 pr-3">
                 <img src={Login} className="w-6 h-auto object-cover" />
                 <span className="text-base font-medium">Login</span>
               </button>

@@ -4,8 +4,8 @@ import { saveAs } from "file-saver";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import link from "../../../public/assets/icons/link.png";
-import download from "../../../public/assets/icons/download.png";
-import album from "../../../public/assets/icons/album.png";
+import download from "/assets/icons/download.png";
+import album from "/assets/icons/album.png";
 
 const Wrapper = () => {
   const [imageFile, setImageFile] = useState(null);

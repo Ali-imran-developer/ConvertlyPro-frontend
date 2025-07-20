@@ -4,7 +4,7 @@ import Navbar from "./components/shared/navbar";
 import Footer from "./components/shared/footer";
 import CheckAuth from "./view/common/checkAuth";
 import routes from "./config/routes";
-import Loading from "@/components/shared/loading";
+import Loading from "./components/shared/loading";
 
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -20,7 +20,7 @@ const App = () => {
         <Navbar />
         <Suspense fallback={<Loading/>}>
           <Routes>
-            {routes.map(({ path, component }, index) => {
+            {routes?.map(({ path, component }, index) => {
               const LazyComponent = React.lazy(component);
               return (
                 <Route key={index} path={path} element={<LazyComponent />}/>

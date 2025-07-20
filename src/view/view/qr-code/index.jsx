@@ -1,7 +1,7 @@
 import React from 'react';
-import Wrapper from "@/components/wrapper/qrScanner";
-import { faqData2 } from "../../data/data";
-import CardGrid from '../../components/shared/cards';
+import Wrapper from "@/view/view/qr-code/components";
+import { faqData2 } from "../../../data/data";
+import CardGrid from '../../../components/shared/cards';
 import { cards11 } from '@/data/cardsData/cardsData';
 import {blogs11} from '@/data/blogsData/blogsData';
 import BlogsCards from '@/components/shared/blogs';
